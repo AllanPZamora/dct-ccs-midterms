@@ -1,8 +1,10 @@
 <?php
+
 include("header.php");
 ?>
 
-<div class="card p-4" style="width: 300px;">
+<br><br>
+<div class="card p-4 mx-auto" style="width: 300px;">
     <h3 class="card-title text-center">Login</h3>
     <div class="container">
         <form>
