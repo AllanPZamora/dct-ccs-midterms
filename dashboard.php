@@ -31,7 +31,7 @@ guard();
                 </div>
                 <div class="card-body">
                     <p>This section allows you to add a new subject in the system. Click the button below to proceed with the adding process.</p>
-                    <a href="" class="btn btn-primary">Add New Subject</a>
+                    <a href="" class="btn btn-primary btn-lg w-100">Add Subject</a>
 
                 </div>
             </div>
@@ -44,7 +44,7 @@ guard();
                 <div class="card-body">
                     <p>This section allows you to register a new student in the system. Click the button below to proceed with the registration process.</p>
                    
-                    <a href="" class="btn btn-primary">Register New Student</a>
+                    <a href="" class="btn btn-primary btn-lg w-100">Register</a>
                 </div>
             </div>
         </div>
