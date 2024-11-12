@@ -1,13 +1,26 @@
 <?php
+session_start();
+$pageTitle = "Dashboard";
+
+    if (empty($_SESSION['email'])) {
+        header("Location: index.php");
+        exit;
+    }
 
 include 'header.php'; 
+include 'functions.php'; 
+
+checkUserSessionIsActive();
+
+guard();
+
 ?>
 
 
 <br>
     <div class="container d-flex justify-content-between align-items-center col-md-7">
-        <h4>Welcome to the System: ?></h4>
-        <button onclick="window.location.href=''" class="btn btn-danger">Logout</button>
+        <h4>Welcome to the System: <?php echo $_SESSION['email']; ?></h4>
+        <button onclick="window.location.href='logout.php'" class="btn btn-danger">Logout</button>
     </div>
     <br><br>
     <div class="row justify-content-center">
