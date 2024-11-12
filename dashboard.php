@@ -44,7 +44,7 @@ guard();
                 <div class="card-body">
                     <p>This section allows you to register a new student in the system. Click the button below to proceed with the registration process.</p>
                    
-                    <a href="" class="btn btn-primary btn-lg w-100">Register</a>
+                    <a href="student/register.php" class="btn btn-primary btn-lg w-100">Register</a>
                 </div>
             </div>
         </div>
