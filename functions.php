@@ -144,5 +144,16 @@ function validateSubjectData($subject_data) {
     return $errors;
 }
 
+function getSelectedSubjectIndex($subject_code) {
+    if (!isset($_SESSION['subject_data'])) {
+        return null;
+    }
+    foreach ($_SESSION['subject_data'] as $index => $subject) {
+        if ($subject['subject_code'] === $subject_code) {
+            return $index;
+        }
+    }
+    return null;
+}
 
 ?>
