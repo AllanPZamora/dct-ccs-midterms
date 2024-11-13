@@ -58,8 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['student_id'])) {
 ?>
 
 <div class="container mt-5">
+    <!-- Page Title -->
     <h2>Edit Student</h2>
     <br>
+    
+    <!-- Breadcrumb Navigation -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../dashboard.php">Dashboard</a></li>
@@ -70,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['student_id'])) {
     <hr>
     <br>
 
+    <!-- Error Messages -->
     <?php if (!empty($errors)): ?>
         <div class="alert alert-danger">
             <strong>System Errors</strong>
@@ -82,23 +86,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['student_id'])) {
         </div>
     <?php endif; ?>
 
+    <!-- Edit Student Form -->
     <?php if ($studentToEdit): ?>
         <form action="edit.php?student_id=<?= urlencode($studentToEdit['student_id']) ?>" method="post">
+            <!-- Student ID (Read-only) -->
             <div class="form-group">
                 <label for="student_id">Student ID</label>
-                <input type="text" class="form-control" id="student_id" name="student_id" value="<?= htmlspecialchars($studentToEdit['student_id']) ?>" readonly>
+                <input type="text" class="form-control" id="student_id" name="student_id" 
+                       value="<?= htmlspecialchars($studentToEdit['student_id']) ?>" readonly>
             </div>
+
+            <!-- First Name Input -->
             <div class="form-group">
                 <label for="first_name">First Name</label>
-                <input type="text" class="form-control" id="first_name" name="first_name" value="<?= htmlspecialchars($studentToEdit['first_name']) ?>">
+                <input type="text" class="form-control" id="first_name" name="first_name" 
+                       value="<?= htmlspecialchars($studentToEdit['first_name']) ?>">
             </div>
+
+            <!-- Last Name Input -->
             <div class="form-group">
                 <label for="last_name">Last Name</label>
-                <input type="text" class="form-control" id="last_name" name="last_name" value="<?= htmlspecialchars($studentToEdit['last_name']) ?>">
+                <input type="text" class="form-control" id="last_name" name="last_name" 
+                       value="<?= htmlspecialchars($studentToEdit['last_name']) ?>">
             </div>
+
             <br>
+            <!-- Submit Button -->
             <button type="submit" class="btn btn-primary">Update Student</button>
         </form>
+    <?php else: ?>
+        <!-- Message if no student is found -->
+        <p class="text-danger">No student record found.</p>
     <?php endif; ?>
 </div>
 
