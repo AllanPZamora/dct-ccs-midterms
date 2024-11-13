@@ -132,4 +132,17 @@ function getSelectedStudentData($index) {
     return $_SESSION['student_data'][$index] ?? false;
 }
 
+
+function validateSubjectData($subject_data) {
+    $errors = [];
+    if (empty($subject_data['subject_code'])) {
+        $errors[] = "Subject Code is required.";
+    }
+    if (empty($subject_data['subject_name'])) {
+        $errors[] = "Subject Name is required.";
+    }
+    return $errors;
+}
+
+
 ?>
