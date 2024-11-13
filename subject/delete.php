@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['subject_code'])) {
         </ol>
     </nav>
 
-    <  <!-- Subject Deletion Confirmation Card -->
+      <!-- Subject Deletion Confirmation Card -->
     <div class="card shadow-sm mx-auto mt-4" style="max-width: 500px;">
         <div class="card-body text-center">
             <?php if ($subjectToDelete): ?>
